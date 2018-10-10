@@ -45,9 +45,15 @@ def parse_html(course_url):
         os.mkdir(course_name)
     print("\n找到课程 {0} {1}、{2}".format(course_name,course_seq,vedio_name))
     file_name="{0}/urls.txt".format(course_name,course_seq,vedio_name)
+    raw_name = get_raw_name(vedio_url)
     with open(file_name,"a") as f:
-        f.write(vedio_url+"\n")
-        f.write(vedio_name+"\n")
+        f.write(vedio_url + "\n")
+        f.write("*" + vedio_name + " " + raw_name + "\n")
+
+def get_raw_name(name):
+    tmp = name.split("/")
+    tmp = tmp[len(tmp) - 1] + ".flv"
+    return tmp
 
 def conv_size(size):
     if size < 1024:
