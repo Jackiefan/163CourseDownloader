@@ -1,6 +1,7 @@
 import os
 def rename():
-    if os.path.exists("urls.txt"):
+    file_name = "urls.txt"
+    if os.path.exists(file_name):
         with open(file_name, "a") as f:
             content = f.read()
             content = content.split("\n")
