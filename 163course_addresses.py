@@ -74,4 +74,4 @@ if __name__=="__main__":
         #获取视频下载链接
         vedio_url=parse_html(course)
 
-    input("当前课程下载完成")
+    input("抓取完成")
