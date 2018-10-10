@@ -8,7 +8,7 @@ def rename():
             for tmp in content:
                 if tmp.startswith("*"):
                     tmp = tmp.replace("*","")
-                    tmp = tmp.split("？")
+                    tmp = tmp.split("?")
                     name = tmp[1]
                     newname = tmp[0]+".flv"
                     if os.path.exists(name):
