@@ -47,6 +47,7 @@ def parse_html(course_url):
     file_name="{0}/urls.txt".format(course_name,course_seq,vedio_name)
     with open(file_name,"a") as f:
         f.write(vedio_url+"\n")
+        f.write(vedio_name+"\n")
 
 def conv_size(size):
     if size < 1024:
