@@ -52,7 +52,7 @@ def parse_html(course_url):
 
 def get_raw_name(name):
     tmp = name.split("/")
-    tmp = tmp[len(tmp) - 1] + ".flv"
+    tmp = tmp[len(tmp) - 1]
     return tmp
 
 def conv_size(size):
