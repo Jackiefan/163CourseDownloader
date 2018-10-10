@@ -48,7 +48,7 @@ def parse_html(course_url):
     raw_name = get_raw_name(vedio_url)
     with open(file_name,"a") as f:
         f.write(vedio_url + "\n")
-        f.write("*" + vedio_name + " " + raw_name + "\n")
+        f.write("*" + vedio_name + "***" + raw_name + "\n")
 
 def get_raw_name(name):
     tmp = name.split("/")
