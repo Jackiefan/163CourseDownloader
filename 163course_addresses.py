@@ -7,7 +7,7 @@ all_course_url=[]
 
 def get_page(url_any):
     """获取文本网页内容"""
-    req=request.urlopen(url_any)
+    req=request.urlopen(url_any,timeout=60)
     content=req.read().decode("gb18030")
     return content
 
